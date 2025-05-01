@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       if (item) {
         document.getElementById("event_context").textContent = item.event_context;
-        document.getElementById("image").src = `images/${item.Photos}`;
+        document.getElementById("image").src = `photos/${item.Photos}`;
         document.getElementById("photo_id").textContent = item.photo_id;
         document.getElementById("date_taken").textContent = item.date_taken;
         document.getElementById("photograper").textContent = item.photograper;
