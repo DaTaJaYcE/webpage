@@ -1,12 +1,83 @@
 <body>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      background-color: #fff8f0;
+      text-align: center;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #4b3d2e;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 10px auto 30px;
+      font-size: 1.1rem;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    #collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .event-link {
+      flex: 0 1 45%;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #3e4eb8;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .event-link:hover {
+      background-color: #f0ece6;
+    }
+  </style>
+
   <h1>Welcome to My Family Photo Album</h1>
   <p>This digital archive was created to preserve and celebrate moments from my family's life. Each photo tells a story.</p>
 
-  
   <img src="photos/IMG_6487.JPG" alt="Family cover photo" width="400">
 
-  
   <div id="collection"></div>
 
-  <script src="script.js"></script>
+  <script>
+    fetch("collection.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("collection");
+
+        data.forEach(item => {
+          const link = document.createElement("a");
+          link.className = "event-link";
+          link.href = `item-template.html?id=${item.photo_id}`;
+          link.textContent = `${item.event_context} (${item.date_taken})`;
+          container.appendChild(link);
+        });
+      })
+      .catch(error => {
+        console.error("Error loading collection.json:", error);
+      });
+  </script>
 </body>
