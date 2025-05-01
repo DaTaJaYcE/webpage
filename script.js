@@ -1,6 +1,3 @@
-// script.js
-
-// Wait until the page loads
 window.addEventListener("DOMContentLoaded", () => {
   fetch("collection.json")
     .then((response) => response.json())
@@ -13,7 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         card.innerHTML = `
           <a href="item-template.html?id=${item.photo_id}">
-            <img src="photos/${item.Photos}" alt="${item.event_context}" style="width:100%; border-radius:8px">
             <h3>${item.event_context}</h3>
             <p><strong>Date:</strong> ${item.date_taken}</p>
           </a>
@@ -26,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading collection.json:", error);
     });
 });
+
 
 
 
