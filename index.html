@@ -4,18 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Family Photo Album</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fff8f0;
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #4b3d2e;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    img.cover-photo {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    #collection {
+      margin-top: 40px;
+    }
+
+    a.link {
+      display: inline-block;
+      margin: 8px;
+      text-decoration: none;
+      color: #3e4eb8;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Family Photo Album</h1>
-  <p>This digital archive was created to preserve and celebrate moments from my family's life. Each photo tells a story.</p>
 
-  
-  <img src="photos/IMG_6487.JPG" alt="Family cover photo" width="500">
+  <header>
+    <h1>Welcome to My Family Photo Album</h1>
+    <p>This is a digital space I created to preserve and honor the moments that matter most to my family. It may be simple, but every detail was made with love.</p>
+  </header>
 
- 
-  <div id="collection"></div>
+  <!-- Cover image -->
+  <img class="cover-photo" src="photos/IMG_6487.JPG" alt="Family cover photo">
 
-  <script src="script.js"></script>
+  <!-- Where photo links will go if needed -->
+  <div id="collection">
+    <!-- Optional: photo event links could appear here using script.js -->
+  </div>
+
+  <div class="footer">
+    <p>Created by Jayce Gray ·</p>
+  </div>
+
 </body>
 </html>
