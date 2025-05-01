@@ -1,8 +1,10 @@
 // script.js
-document.addEventListener("DOMContentLoaded", function () {
+
+// Wait until the page loads
+window.addEventListener("DOMContentLoaded", () => {
   fetch("collection.json")
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       const container = document.getElementById("collection");
 
       data.forEach((item) => {
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         card.innerHTML = `
           <a href="item-template.html?id=${item.photo_id}">
-            <img src="images/${item.image}" alt="${item.event_context}">
+            <img src="images/${item.image}" alt="${item.event_context}" style="width:100%; border-radius:8px">
             <h3>${item.event_context}</h3>
             <p><strong>Date:</strong> ${item.date_taken}</p>
           </a>
@@ -20,12 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(card);
       });
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error loading collection.json:", error);
     });
 });
-
-
 
 
 
