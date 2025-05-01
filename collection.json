@@ -209,7 +209,7 @@
     "date_taken": "2019-12-14",
     "photograper": "Unknown",
     "location": "Atlanta,Ga",
-    "event_context": "",
+    "event_context": "Football Game",
     "people": [
       "Jayce",
       "Jayden",
@@ -316,7 +316,7 @@
     "date_taken": "2012-07-05",
     "photograper": "Dewayne",
     "location": "Unkown",
-    "event_context": "None",
+    "event_context": "Day at the Park",
     "people": [
       "Jayce",
       "Jayden"
@@ -498,7 +498,7 @@
     "date_taken": "2018-08-04",
     "photograper": "Unknown",
     "location": "Unkown",
-    "event_context": "NONE",
+    "event_context": "Leaving for Basic Training",
     "people": [
       "Jayce",
       "Jayden",
@@ -543,7 +543,7 @@
     "date_taken": "Unknown",
     "photograper": "Belita",
     "location": "Cordele,Ga",
-    "event_context": "NONE",
+    "event_context": "Random Sunday",
     "people": [
       "Jayce",
       "Jayden",
